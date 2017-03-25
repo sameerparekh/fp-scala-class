@@ -149,13 +149,20 @@ case class Branch[A](left: Tree[A], right: Tree[A]) extends Tree[A]
 
 // Exercise
 val myTree =
-  Branch(Leaf(4), Branch(Leaf(4), Branch(Leaf(4), Branch(Leaf(1), Leaf(5)))))
+  Branch(
+    Leaf(1),
+    Branch(
+      Leaf(2),
+      Branch(
+        Leaf(3),
+        Branch(
+          Leaf(4),
+          Leaf(5)))))
 
 def contents[A](tree: Tree[A]): List[A] = ???
 
 contents(myTree)
 
-// Compile error
 //def contents2[A](tree: Tree[A]): List[A] = tree match {
 //  case Leaf(value) => List(value)
 //}
