@@ -75,7 +75,7 @@ val elegant: Seq[Int] = maybeNumbers.collect{ case Some(i) => i }
  * This is truely a contrived example, but when
  * the filtering logic gets nasty, this is a life saver. For those of
  * you who work with compiled thrift objects, you can use a similar
- * destructuring approach to pull out deeply nested things
+ * destructuring approach to pull out deeply nested 'things'.
  *
  * also note that we can avoid calling .get() in the second case,
  * which is a smell in Scala code.
