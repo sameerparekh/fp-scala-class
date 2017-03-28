@@ -40,7 +40,7 @@ val oneHundredEvenNumbers: Seq[Int] = Stream.from(1)
   .filter(x => 0 == x % 2 )
   .take(100)
 
-val asOneLongString = oneHundredEvenNumbers map newFunction mkString "\n"
+val asOneLongString = ???
 
 println(s"Here are all the values as one long string:\n$asOneLongString")
 
