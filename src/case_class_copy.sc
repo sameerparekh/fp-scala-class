@@ -16,7 +16,7 @@ val aCheapWindCar = new WindCar(
 )
 
 val aGreenCheapWindCar = new WindCar(
-  aCheapWindCar.maxAirSpeedInMetersPerSecond
+  aCheapWindCar.maxAirSpeedInMetersPerSecond,
   "green",
   aCheapWindCar.isExpensive
 )
@@ -36,7 +36,7 @@ case class BetterWindCar(
 val aCheapBetterWindCar: BetterWindCar = BetterWindCar(
   50,
   "taupe",
-  false
+  isExpensive = false
 )
 
 /**

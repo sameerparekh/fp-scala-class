@@ -51,31 +51,31 @@ println(s"Here are all the values as one long string:\n$asOneLongString")
  * some logic to render templates based on a configuration. If we be in Javaland
  * we might write something like this:
  */
-class Renderer {
+//class JavaRenderer {
+//
+//  public String render(
+//    RenderConfig config,
+//    Template template,
+//    Map<String, String> values
+//  ) {
+//    // Stuff goes here
+//  }
+//
+//}
 
-  public String render(
-    RenderConfig config,
-    Template template,
-    Map<String, String> values
-  ) {
-    // Stuff goes here
-  }
+// but in Scalaland, we might actually want do write something like this:
 
-}
-
-// but in Scalaland, we might actially want do write something like this:
-
-class Renderer extends (RenderConfig, Template, Map[String, String]) => String {
-
- def apply(
-   config: RenderConfig,
-   template: Template,
-   values: Map[String, String]
- ): String = {
-   // Stuff goes here
- }
-
-}
+//class Renderer extends (RenderConfig, Template, Map[String, String]) => String {
+//
+// def apply(
+//   config: RenderConfig,
+//   template: Template,
+//   values: Map[String, String]
+// ): String = {
+//   // Stuff goes here
+// }
+//
+//}
 
 /**
  * and actually have our class extend a Function3, instead of having
