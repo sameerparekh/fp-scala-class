@@ -34,7 +34,7 @@ println(timesTwo(8))
  *
  * val timesTwo: Int => Int = multipleTwoNumbers(2, _: Int)
  *
- * first we can see the type of this new function is Init => Int, meaning
+ * first we can see the type of this new function is Int => Int, meaning
  * it takes an integer and returns and integer. next we see that this fucntion
  * is equal to multipleTwoNumbers, however the first argument is set to 2,
  * while the second argument is set to be "some other int". Note that you
@@ -67,7 +67,7 @@ sillyFunction("I love curry")
 /**
  * There is another somewhat similar way to achieve this functionality
  * in Scala (and other languages) using higher order functions.
- * Partially this is a little different to partially applying because
+ * This is a little different to partially applying because
  * we can only call higher order functions from their first parameter to their last
  * in order, and it is predicated on the fact that:
  *  - Functions are first class and as such:
