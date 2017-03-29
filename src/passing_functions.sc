@@ -51,6 +51,7 @@ println(s"Here are all the values as one long string:\n$asOneLongString")
  * some logic to render templates based on a configuration. If we be in Javaland
  * we might write something like this:
  */
+
 //class JavaRenderer {
 //
 //  public String render(
@@ -86,8 +87,8 @@ println(s"Here are all the values as one long string:\n$asOneLongString")
  *  - you get .curried for free, in case you want to eaily build multiple
  *    types of formatters
  *  - no having to come up with redundant class/function names (i.e. a Render class with
- *    single .render() method )
+ *    single .render() method)
  *  - since its not just a plain Function3[(RenderConfig, Template, Map[String, String]), String]
- *    you can inject it easily without using @Named()
- *
+ *    you can inject it easily without using @Named() for all you Guicers out
+ *    there
  */
