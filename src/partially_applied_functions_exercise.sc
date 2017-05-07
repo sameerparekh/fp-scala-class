@@ -40,10 +40,8 @@ println(timesTwo(8))
  * while the second argument is set to be "some other int". Note that you
  * can partially apply functions with arbitrary paramater lenghts in arbirary positions
  * like so:
-*/
-
-
-val myNutsFunction: (Int, String, Try[Long]) => Try[String] = (int, string, tried) => {
+ */
+val nonSensicalFunction: (Int, String, Try[Long]) => Try[String] = (int, string, tried) => {
   if (int > 0) {
     println(s"""
               |My PM said if the number is > 0 we should
@@ -57,9 +55,8 @@ val myNutsFunction: (Int, String, Try[Long]) => Try[String] = (int, string, trie
   }
 }
 
-
 val sillyFunction: String => Try[String] =
-  myNutsFunction(100, _: String, Success(Long.MaxValue))
+  nonSensicalFunction(100, _: String, Success(Long.MaxValue))
 
 // Notice that sillyFunction partially applies the 1st and 3rd parameters
 sillyFunction("I love curry")
@@ -127,7 +124,7 @@ assert(
  *  - We assert that the results really are equal. Fun!
  *
  * Your task is to create two functions that do the same thing. Both that accept a single string
- * and return a Seq[String] based on addTooAListPartiallyApplyMe and addToListPartiallyApplyMe
+ * and return a Seq[String] based on addTooAListPartiallyApplyMe and addToListHigherOrder
  * such that the Seq[String] passed in is the provided `initialList`, and the first
  * String is "muskrat". The first implementation should be done by partial appliction,
  * the other by using the provided higher order function.
@@ -139,7 +136,7 @@ val addTooAListPartiallyApplyMe: (Seq[String], String, String) => Seq[String] = 
   seq :+ str1 :+ str2
 }
 
-val addToListPartiallyApplyMe: Seq[String] => String => String => Seq[String] = seq => {
+val addToListHigherOrder: Seq[String] => String => String => Seq[String] = seq => {
   str1 => {
     str2 => {
       seq :+ str1 :+ str2
@@ -147,8 +144,11 @@ val addToListPartiallyApplyMe: Seq[String] => String => String => Seq[String] = 
   }
 }
 
-val partiallyAppliedVersion: String => Seq[String] = ???
-val higherOrderVersion: String => Seq[String] = ???
+val partiallyAppliedVersion: String => Seq[String] =
+  addTooAListPartiallyApplyMe(initialList, "hi", _: String)
+
+
+val higherOrderVersion: String => Seq[String] = addToListHigherOrder(initialList)("")
 
 assert(
   partiallyAppliedVersion("manbearpig") == higherOrderVersion("manbearpig"),

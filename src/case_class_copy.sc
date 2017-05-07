@@ -3,22 +3,22 @@
  * classes harder to modify. Here is an example:
  */
 
-class WindCar(
+class FlyingMachine(
   val maxAirSpeedInMetersPerSecond: Int,
   val color: String,
   val isExpensive: Boolean
 )
 
-val aCheapWindCar = new WindCar(
+val aCheapFlyingMachine = new FlyingMachine(
   50,
   "taupe",
   false
 )
 
-val aGreenCheapWindCar = new WindCar(
-  aCheapWindCar.maxAirSpeedInMetersPerSecond,
+val aGreenCheapFlyingMachine = new FlyingMachine(
+  aCheapFlyingMachine.maxAirSpeedInMetersPerSecond,
   "green",
-  aCheapWindCar.isExpensive
+  aCheapFlyingMachine.isExpensive
 )
 
 /**
@@ -27,25 +27,25 @@ val aGreenCheapWindCar = new WindCar(
  * rewrite this logic using a case class and the .copy() method?
  */
 
-case class BetterWindCar(
+case class BetterFlyingMachine(
   maxAirSpeedInMetersPerSecond: Int,
   color: String,
   isExpensive: Boolean
 )
 
-val aCheapBetterWindCar: BetterWindCar = BetterWindCar(
+val aCheapBetterFlyingMachine: BetterFlyingMachine = BetterFlyingMachine(
   50,
   "taupe",
   isExpensive = false
 )
 
 /**
- * Create a new version of aCheapBetterWindCar but make it blue
+ * Create a new version of aCheapBetterFlyingMachine but make it blue
  * using .copy() method. Use the test below to help.
  */
-val aBlueCheapBetterWindCar: BetterWindCar = ???
+val aBlueCheapBetterFlyingMachine: BetterFlyingMachine = aCheapBetterFlyingMachine.copy(color = "blue")
 
 assert(
-  "blue" == aBlueCheapBetterWindCar.color,
-  s"Hey, I said I wanted it blue not ${aBlueCheapBetterWindCar.color}."
+  "blue" == aBlueCheapBetterFlyingMachine.color,
+  s"Hey, I said I wanted it blue not ${aBlueCheapBetterFlyingMachine.color}."
 )

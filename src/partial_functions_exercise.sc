@@ -84,4 +84,7 @@ val elegant: Seq[Int] = maybeNumbers.collect{ case Some(i) => i }
  * Write a partial function that operates on Try[String] and that returns
  * the string in the successful case, ignoring the failed case
  */
-val myPartial: PartialFunction[Try[String], String] = ???
+val myPartial: PartialFunction[Try[String], String] = {
+  case Success(s) =>
+    s
+}

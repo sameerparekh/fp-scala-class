@@ -57,26 +57,36 @@ println(
  *
  * Use the test cases at the bottom to validate your work
  */
+
 def isTuesday: Boolean = {
   LocalDateTime.now().getDayOfWeek == DayOfWeek.TUESDAY
 }
 
-var statementNumbers: Seq[Int] = Seq(1)
+
+// Implement with a statement
+var statementList = Seq(1)
+
+if (???) {
+  ???
+}
 
 // Implement with an expression
-val expressionList: Seq[Int] = ???
+val expressionList: Seq[Int] = if (???) {
+  ???
+} else ???
 
+// Also modify with a statement mutating statementNumbers
 assert(
-  statementNumbers.forall(expressionList.contains),
+  statementList.forall(expressionList.contains),
   "The lists should have the same elements!"
 )
 
 assert(
   if (isTuesday) {
-    2 == statementNumbers.size
+    2 == statementList.size
     2 == expressionList.size
   } else {
-    1 == statementNumbers.size
+    1 == statementList.size
     1 == expressionList.size
   },
   "On Tuesdays, for important business reasons, we set should have 2 elements in the seq"

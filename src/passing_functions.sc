@@ -34,7 +34,7 @@ Seq(1, 2, 3, 4) foreach printANumber
  *  such as Runnable
  */
 
-val newFunction: Int => String = ???
+val newFunction: Int => String = i => s"Hey I got $i"
 
 val oneHundredEvenNumbers: Seq[Int] = Stream.from(1)
   .filter(x => 0 == x % 2 )
