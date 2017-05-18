@@ -66,6 +66,7 @@ def isTuesday: Boolean = {
 // Implement with a statement
 var statementList = Seq(1)
 
+// Modify with a statement mutating statementNumbers
 if (???) {
   ???
 }
@@ -75,7 +76,7 @@ val expressionList: Seq[Int] = if (???) {
   ???
 } else ???
 
-// Also modify with a statement mutating statementNumbers
+
 assert(
   statementList.forall(expressionList.contains),
   "The lists should have the same elements!"
