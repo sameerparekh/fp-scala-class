@@ -7,4 +7,4 @@ def average(list: List[Double]): Double = {
   sum / list.size
 }
 
-def averageFunctional(list: List[Double]): Double = list.size /
+def averageFunctional(list: List[Double]): Double = ???

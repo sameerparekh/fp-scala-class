@@ -39,14 +39,15 @@ case class FamousPerson(
   lastName: String,
   isHouseOfCardsCastMember: Boolean = false
 ) extends User
-class GlueLickingIdiot(nameOrWhatever: String) extends User
+
+class GreatUnwashed(nameOrWhatever: String) extends User
 
 /**
  * Now, it is more than clear to anyone that Kevin Spacey is not only a talented
  * actor, but a rather famous person. It would also be a bit of a pain to have
  * to write a function to detect whether or not someone really was Kevin Spacey
  * that looked at all Users, because it is quite obvious that Kevin Spacey
- * is not a memebr of the GlueLickingIdiot class. To solve that deliema,
+ * is not a member of the GreatUnwashed class. To solve that deliema,
  * we can use a PartialFunction[User, Boolean]
  */
 val isKevinSpacey: PartialFunction[User, Boolean] = {
@@ -60,7 +61,7 @@ val isKevinSpacey: PartialFunction[User, Boolean] = {
  * A partial function, unlike a regular function, does not have to
  * handle all possible inputs that could be passed to it. notice
  * that isKevinSpacey partial function has a case statement that
- * only handles FamousPerson and completely ignores GlueLickingIdiot
+ * only handles FamousPerson and completely ignores GreatUnwashed
  *
  * A significantly more practical usage of this is the .collect{} method
  * that is available on Scala collections. It accepts a partial function
