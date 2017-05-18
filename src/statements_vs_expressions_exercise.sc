@@ -49,7 +49,7 @@ println(
 /**
  * Your turn. Below is a function that will tell you
  * if today is Tuesday. Based on this function, write:
- *  - A statement that adds '2' to the end of the 'statementNumbers'
+ *  - A statement that adds '2' to the end of the 'statementList'
  *    sequence if today is tuesday
  *  - An expression that returns a sequence containing 1 if it is
  *    not Tuesday, or a sequence containing 1, 2 if today is tuesday
